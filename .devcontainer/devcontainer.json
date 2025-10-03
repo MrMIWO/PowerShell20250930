@@ -1,7 +1,7 @@
 {
   "name": "PowerShell Development",
   // Microsoftが提供するPowerShell用の公式イメージを使用します
-  "image": "mcr.microsoft.com/devcontainers/powershell:latest",
+  "image": "mcr.microsoft.com/devcontainers/powershell:7.4",
 
   // VS Codeの設定をカスタマイズします
   "customizations": {
@@ -12,7 +12,7 @@
       ],
       // VS Codeのユーザー設定
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "pwsh", // ターミナルのデフォルトシェルをPowerShellに
+        "terminal.integrated.defaultProfile.linux": "bash", // ターミナルのデフォルトシェルをPowerShellに
         "editor.formatOnSave": true // ファイル保存時に自動でフォーマット
       }
     }
