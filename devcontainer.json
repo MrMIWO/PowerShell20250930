@@ -1,0 +1,26 @@
+{
+  "name": "PowerShell Dev Environment",
+  // PowerShellがプリインストールされたMicrosoft公式イメージを使用します
+  "image": "mcr.microsoft.com/powershell",
+
+  // --- ここからが重要な設定 ---
+
+  // ワークスペースのマウント設定
+  // "target"で、ローカルのC:\PowerShell_プログラム に対応するコンテナ内のパスを指定します
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/PowerShell_プログラム/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+
+  // ワークスペースフォルダの設定
+  // 上記の target と同じパスを指定します
+  "workspaceFolder": "/home/vscode/PowerShell_プログラム/${localWorkspaceFolderBasename}",
+
+  // --- ここまでの設定が重要 ---
+
+  // VS Codeの拡張機能など、その他の設定例
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.powershell"
+      ]
+    }
+  }
+}
